@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 2004 Student Responses</title>
+</head>
+<body>
+    <h1>What year are the CSE2004 students?</h1>
+    <canvas id="myChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart')
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+            labels: ['Sophomore', 'Junior', 'Senior', 'Graduate'],
+            datasets: [{
+                label: 'Number of Students',
+                data: [11, 21, 19, 2],
+            }]
+            },
+            options: {
+                layout: {
+                    padding: {
+                        top: 0,
+                        bottom: 400,
+                        left: 200,
+                        right: 200
+                    }
+                }
+            },
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        })
+    </script>
+</body>
+</html>
